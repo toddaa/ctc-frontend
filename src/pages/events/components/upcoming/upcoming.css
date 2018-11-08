@@ -1,0 +1,18 @@
+.event-date {
+	font-size:.8em;
+	color:#000000;
+}
+.event-start-time {
+	float:right!important;
+}
+.event-start-date {
+	float:left!important;
+}
+.event-title {
+	font-size:1em;
+	font-weight:bold;
+	color:#000000;
+}
+.upcoming h5.card-title{
+	margin-bottom:0;
+}

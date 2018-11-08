@@ -1,0 +1,15 @@
+.carousel{
+	background-color: brown;
+}
+
+.carousel-item{
+	padding:200px;
+}
+
+.carousel-caption {
+	text-align:left !important;
+}
+
+.carousel-caption p{
+	font-size:.8em;
+}

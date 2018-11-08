@@ -1,0 +1,15 @@
+.fa-3x{
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.btn-main{
+	width:160px;
+	height:160px;
+	margin:10px;
+}
+.links .row{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
