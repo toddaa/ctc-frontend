@@ -39,7 +39,10 @@ class Header extends Component {
 						</ul>
 						<ul className="navbar-nav">
 							<li className="nav-item">
-								<NavLink className="nav-link" to='/admin' exact>{iconKey}</NavLink >
+								<NavLink className="nav-link" to='/admin' exact>
+									<span className="d-none d-md-block">{iconKey}</span>
+									<span className="d-block d-md-none">Admin</span>
+								</NavLink >
 							</li>
 						</ul>
 					</div>

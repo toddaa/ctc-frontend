@@ -5,7 +5,7 @@ import './upcoming.css';
 class Upcoming extends Component {
 	render() {
 		return (
-			<section className="upcoming pl-2 w-100">
+			<section className="upcoming">
 				<div className="card text-white bg-info">
 					<div className="card-body">
 						<h5 className="card-title">Upcoming Events</h5>

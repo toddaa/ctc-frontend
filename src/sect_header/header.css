@@ -2,3 +2,19 @@
 	height:116px;
 	background-color:#000000!important;
 }
+@media (max-width: 767.98px) {
+	header #navbarCollapse{
+		background-color: #000000de;
+		margin-top:8px;
+		margin-left:-16px;
+		margin-right:-16px;
+	}
+
+	header #navbarCollapse .nav-item {
+		border-bottom: 1px solid #2f2f2f;
+	}
+
+	header #navbarCollapse .nav-item a{
+		padding-left:10px;
+	}
+}

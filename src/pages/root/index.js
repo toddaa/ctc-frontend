@@ -8,7 +8,7 @@ import Links from './components/links';
 const ContentRoot = () => (
 		<section className="welcome">
 				<div className="row">
-						<div className="col-md-12">
+						<div className="col">
 							{/* <h3 className="d-none d-sm-block">Welcome</h3> */}
 							<Carousel />
 							<Mission />

@@ -19,11 +19,19 @@ const pagehead = (
 const ContentEvents = () => (
 	<section className="events">
 		<div className="row">
-			{pagehead}
-			<FeatureEvent />
-			<div className="d-flex bd-highlight">
-				<Camps />
-				<Upcoming />
+			<div className="col">
+				{pagehead}
+				<FeatureEvent />
+				<div className="d-none d-md-block">
+					<div className="d-flex">
+						<Camps />
+						<Upcoming />
+					</div>
+				</div>
+				<div className="d-block d-md-none">
+						<Upcoming />
+						<Camps />
+				</div>
 			</div>
 		</div>
 	</section>

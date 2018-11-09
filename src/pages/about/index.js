@@ -16,7 +16,7 @@ const pagehead = (
 const ContentAbout = () => (
 	<section className="about">
 		<div className="row">
-			<div className="col-md-12">
+			<div className="col">
 				{pagehead}
 				<h5>Crosswalk Teen Center is an innovative nonprofit community youth center that was designed around the interests and needs of teens in the Charlotte area.
 					We are located in Charlotte, Michigan and serve teens and families from the surrounding area.

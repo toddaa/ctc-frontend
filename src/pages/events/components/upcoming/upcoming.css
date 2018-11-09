@@ -16,3 +16,12 @@
 .upcoming h5.card-title{
 	margin-bottom:0;
 }
+@media (min-width: 767.98px) {
+	.upcoming{
+		padding-left: .5rem!important;
+		width: 100%!important;
+	}
+}
+.upcoming{
+	padding-bottom: 1rem!important;
+}
