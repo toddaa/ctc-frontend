@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Header from '../../sect_header';
 import Footer from '../../sect_footer';
 import PageHeader from '../../components/page-header';
 
 const iconAbout = (
-	<FontAwesomeIcon icon={faBuilding} />
+	<FontAwesomeIcon icon={faInfoCircle} />
 );
 
 const pagehead = (

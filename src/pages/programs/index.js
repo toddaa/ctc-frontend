@@ -24,10 +24,10 @@ const ContentPrograms = () => (
 		</div>
 		<div className="row">
 				<div className="col">
-					<div class="card border-secondary">
-						<div class="card-body">
-							<h5 class="card-title">Educational Support</h5>
-							<p class="card-text">
+					<div className="card border-secondary">
+						<div className="card-body">
+							<h5 className="card-title">Educational Support</h5>
+							<p className="card-text">
 								<ul>
 									<li>Tutoring</li>
 									<li>Robotics</li>
@@ -40,10 +40,10 @@ const ContentPrograms = () => (
 							</p>
 						</div>
 					</div>
-					<div class="card border-secondary">
-						<div class="card-body">
-							<h5 class="card-title">Everyday Life</h5>
-							<p class="card-text">
+					<div className="card border-secondary">
+						<div className="card-body">
+							<h5 className="card-title">Everyday Life</h5>
+							<p className="card-text">
 								<ul>
 									<li>Cooking Classes</li>
 									<li>Lesuire Time Fun</li>
@@ -56,10 +56,10 @@ const ContentPrograms = () => (
 					</div>
 				</div>
 				<div className="col">
-					<div class="card border-secondary">
-						<div class="card-body">
-							<h5 class="card-title">Community Connections</h5>
-							<p class="card-text">
+					<div className="card border-secondary">
+						<div className="card-body">
+							<h5 className="card-title">Community Connections</h5>
+							<p className="card-text">
 								<ul>
 									<li>Leadership Development</li>
 									<li>Community Service Project Design</li>
@@ -69,10 +69,10 @@ const ContentPrograms = () => (
 							</p>
 						</div>
 					</div>
-					<div class="card border-secondary">
-						<div class="card-body">
-							<h5 class="card-title">Expressive Arts</h5>
-							<p class="card-text">
+					<div className="card border-secondary">
+						<div className="card-body">
+							<h5 className="card-title">Expressive Arts</h5>
+							<p className="card-text">
 								<ul>
 									<li>Video Production</li>
 									<li>Internet Radio Station</li>

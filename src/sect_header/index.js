@@ -39,7 +39,7 @@ class Header extends Component {
 						</ul>
 						<ul className="navbar-nav">
 							<li className="nav-item">
-								<NavLink className="nav-link" to='/admin' exact>
+								<NavLink className="nav-link" to='/admin' exact aria-label="Admin">
 									<span className="d-none d-md-block">{iconKey}</span>
 									<span className="d-block d-md-none">Admin</span>
 								</NavLink >

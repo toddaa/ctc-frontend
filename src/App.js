@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+//import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutPage from './pages/about';
 import ProgramsPage from './pages/programs';
@@ -32,19 +33,19 @@ export const fakeAuth = {
 class App extends Component {
 	render() {
 		return (
-			<BrowserRouter>
-						<div>
-							<Switch>
-								<Route exact path='/' component={RootPage} />
-								<Route path='/about' component={AboutPage} />
-								<Route path='/programs' component={ProgramsPage} />
-								<Route path='/events' component={EventsPage} />
-								<Route path='/donate' component={DonatePage} />
-								<Route path='/login' component={LoginPage} />
-								<Route path='/admin' component={AdminPage} />
-							</Switch>
-						</div>
-					</BrowserRouter>
+			<Router>
+				<div>
+					<Switch>
+						<Route exact path='/' component={RootPage} />
+						<Route path='/about' component={AboutPage} />
+						<Route path='/programs' component={ProgramsPage} />
+						<Route path='/events' component={EventsPage} />
+						<Route path='/donate' component={DonatePage} />
+						<Route path='/login' component={LoginPage} />
+						<Route path='/admin' component={AdminPage} />
+					</Switch>
+				</div>
+			</Router>
 		);
 	}
 }

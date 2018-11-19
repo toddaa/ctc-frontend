@@ -4,7 +4,7 @@ import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import './mission.css';
 
 const iconArrows = (
-	<FontAwesomeIcon icon={faAngleDoubleRight} size={"4x"} />
+	<FontAwesomeIcon icon={faAngleDoubleRight} size={"4x"} className="fa-pull-left" />
 );
 
 class Mission extends Component {
@@ -13,11 +13,8 @@ class Mission extends Component {
 			<section className="mission">
 			<div className="container">
 				<div className="row">
-						<div className="col-1 text-center">
-							{iconArrows}
-						</div>
-						<div className="col-11">
-							<h5>The mission of the Crosswalk Teen Center is to provide a safe, enjoyable environment where teenagers can engage in beneficial, educational, and leisure-time activities.
+						<div className="col">
+							<h5>{iconArrows}The mission of the Crosswalk Teen Center is to provide a safe, enjoyable environment where teenagers can engage in beneficial, educational, and leisure-time activities.
 								The Crosswalk Teen Center strives to develop and empower diverse teen leaders who will enrich the community.</h5>
 						</div>
 				</div>

@@ -1,0 +1,204 @@
+[
+    {
+        "id": 1,
+        "type":"M",
+        "barcode": "S0000",
+        "first_name": "Samantha",
+        "last_name": "Todd",
+        "nickname": "Sammy",
+        "photo": "277667",        
+        "dob":"2006-08-29T00:00:00.000Z",
+        "gender":"F",  
+        "address": {
+            "address1": "789 N Wheaton Rd",
+            "address2": "",
+            "city": "Charlotte",
+            "state": "MI",
+            "zip": 48813,
+            "country": "United States"
+        },
+        "contact":{
+            "email1": "toddaa@gmail.com",
+            "phone_home": 5174885251,
+            "phone_cell": 5178996135
+        },
+        "social_media": {
+            "facebook": "@toddaa",
+            "twitter": ""
+        },
+        "edu": {
+            "school": "CHS",
+            "hs_grad_year": 2020,
+            "college": ""
+        },
+        "attributes": {
+            "teen_board": false,
+            "apprentice": false
+        },
+        "subscriptions":{
+            "programs": true,
+            "fundraising": false
+        },
+        "parents": [
+            2
+        ]
+    },
+    {
+        "id": 2,
+        "type":"P",
+        "barcode": "A8888",
+        "first_name": "Aaron",
+        "last_name": "Todd",
+        "nickname": "Big A",
+        "photo": "259600",        
+        "dob":"1981-07-07T00:00:00.000Z",
+        "gender":"M",  
+        "address": {
+            "address1": "789 N Wheaton Rd",
+            "address2": "",
+            "city": "Charlotte",
+            "state": "MI",
+            "zip": 48813,
+            "country": "United States"
+        },
+        "contact":{
+            "email1": "toddaa@gmail.com",
+            "email2": "toddaa@gmail.com",
+            "phone_home": 5174885251,
+            "phone_cell": 5178996135,
+            "phone_work": 6162616634
+        },
+        "social_media": {
+            "facebook": "",
+            "twitter": ""
+        },
+        "attributes": {
+            "baord": false,
+            "volunteer": true
+        },
+        "subscriptions":{
+            "programs": true,
+            "fundraising": false
+        }
+    },
+    {
+        "id": 3,
+        "type":"V",
+        "barcode": "A9999",
+        "first_name": "Rick",
+        "last_name": "Todd",
+        "nickname": "Ned",
+        "photo": "259600",        
+        "dob":"1981-07-07T00:00:00.000Z",
+        "gender":"M",  
+        "address": {
+            "address1": "5795 Otto Rd",
+            "address2": "",
+            "city": "Charlotte",
+            "state": "MI",
+            "zip": 48813,
+            "country": "United States"
+        },
+        "contact":{
+            "email1": "toddaa@gmail.com",
+            "email2": "toddaa@gmail.com",
+            "phone_home": 5174885251,
+            "phone_cell": 5178996135,
+            "phone_work": 6162616634
+        },
+        "social_media": {
+            "facebook": "",
+            "twitter": ""
+        },
+        "attributes": {
+            "baord": false,
+            "volunteer": true
+        },
+        "subscriptions":{
+            "programs": true,
+            "fundraising": false
+        }
+    },
+    {
+        "id": 4,
+        "type":"P",
+        "barcode": "A8888",
+        "first_name": "Alison",
+        "last_name": "Todd",
+        "nickname": "Big A",
+        "photo": "259600",        
+        "dob":"1981-07-07T00:00:00.000Z",
+        "gender":"F",  
+        "address": {
+            "address1": "789 N Wheaton Rd",
+            "address2": "",
+            "city": "Charlotte",
+            "state": "MI",
+            "zip": 48813,
+            "country": "United States"
+        },
+        "contact":{
+            "email1": "toddaa@gmail.com",
+            "email2": "toddaa@gmail.com",
+            "phone_home": 5174885251,
+            "phone_cell": 5178996135,
+            "phone_work": 6162616634
+        },
+        "social_media": {
+            "facebook": "",
+            "twitter": ""
+        },
+        "attributes": {
+            "baord": false,
+            "volunteer": true
+        },
+        "subscriptions":{
+            "programs": true,
+            "fundraising": true
+        }
+    },
+    {
+        "id": 5,
+        "type":"M",
+        "barcode": "S0000",
+        "first_name": "Connor",
+        "last_name": "Todd",
+        "nickname": "Sammy",
+        "photo": "277667",        
+        "dob":"2006-08-29T00:00:00.000Z",
+        "gender":"M",  
+        "address": {
+            "address1": "789 N Wheaton Rd",
+            "address2": "",
+            "city": "Charlotte",
+            "state": "MI",
+            "zip": 48813,
+            "country": "United States"
+        },
+        "contact":{
+            "email1": "toddaa@gmail.com",
+            "phone_home": 5174885251,
+            "phone_cell": 5178996135
+        },
+        "social_media": {
+            "facebook": "@toddaa",
+            "twitter": ""
+        },
+        "edu": {
+            "school": "CHS",
+            "hs_grad_year": 2020,
+            "college": ""
+        },
+        "attributes": {
+            "teen_board": false,
+            "apprentice": false
+        },
+        "subscriptions":{
+            "programs": true,
+            "fundraising": false
+        },
+        "parents": [
+            4
+        ]
+    }
+]

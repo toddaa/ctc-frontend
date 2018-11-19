@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStream, faChartPie } from '@fortawesome/free-solid-svg-icons';
+import { faStream, faChartPie, faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faIdBadge } from '@fortawesome/free-regular-svg-icons';
 import './sidebar.css';
 
 const iconIdBadge = (
-	<FontAwesomeIcon icon={faIdBadge} />
+	<FontAwesomeIcon icon={faIdBadge} className="fa-fw" />
 );
 
 const iconLog = (
-	<FontAwesomeIcon icon={faStream} />
+	<FontAwesomeIcon icon={faStream} className="fa-fw" />
 );
 
 const iconReport = (
-	<FontAwesomeIcon icon={faChartPie} />
+	<FontAwesomeIcon icon={faChartPie} className="fa-fw" />
+);
+
+const iconDashboard = (
+	<FontAwesomeIcon icon={faTachometerAlt} className="fa-fw" />
 );
 
 class Sidebar extends Component {
+
 	render() {
 		return (
 				<nav id="sidebar">
@@ -42,13 +47,16 @@ class Sidebar extends Component {
 							</ul>
 						</li> */}
 						<li>
-							<NavLink className="nav-link" to='/admin/members' exact>{iconIdBadge} Members</NavLink>
+							<NavLink className="nav-link" to='/admin/dashboard' onClick={this.toggle} activeClassName="active">{iconDashboard} Dashboard</NavLink>
 						</li>
 						<li>
-							<NavLink className="nav-link" to='/admin/reports' exact>{iconReport} Reports</NavLink>
+							<NavLink className="nav-link" to='/admin/members' onClick={this.toggle} activeClassName="active">{iconIdBadge} Members</NavLink>
 						</li>
 						<li>
-							<NavLink className="nav-link" to='/admin/logs' exact>{iconLog} Logs</NavLink>
+							<NavLink className="nav-link" to='/admin/reports' onClick={this.toggle} activeClassName="active">{iconReport} Reports</NavLink>
+						</li>
+						<li>
+							<NavLink className="nav-link" to='/admin/logs' onClick={this.toggle} activeClassName="active">{iconLog} Logs</NavLink>
 						</li>
 					</ul>
 				</nav>

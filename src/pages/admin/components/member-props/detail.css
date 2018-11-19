@@ -1,0 +1,16 @@
+.fieldLabel{
+	float:left;
+	margin-right:6px;
+	font-weight:normal;
+	width:120px;
+	text-align:right;
+	display: inline-block;
+}
+
+.fieldContent{
+	margin-left:126px;
+}
+
+.fieldContent span{
+	display:block;
+}
