@@ -13,7 +13,7 @@ class PageMembers extends Component {
 		return (
 			<div className="container-fluid admin-pane">
 				<div className="row">
-					<div className="col-3">
+					<div className="col-4">
 						<MemberSearch/>
 						<MemberTable />
 						<MemberToolbar />

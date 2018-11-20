@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut, faUserNinja } from '@fortawesome/free-solid-svg-icons';
+import Subtitle from '../../sub-title';
 import './dashboard.css';
 
 const iconMember = (
@@ -21,7 +22,7 @@ class PageDashboard extends Component {
 			<div className="container-fluid admin-pane">
 				<div className="row">
 					<div className="col">
-						<h3>Dashboard</h3>
+						<Subtitle text="Dashboard" showDate="true"/>
 						<div className="card-deck">
 							<div className="card text-white bg-info">
 								<div className="card-body">

@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Subtitle from '../../sub-title';
 
 class PageLog extends Component {
+	constructor(props, context){
+		super(props, context);
+		console.log(props.logs)
+	}
+
 	render() {
+
+		// const logRows = this.props.logs
+		// .map(h =>
+		
+		// 	<tr>
+		// 		<th scope="row">h.id</th>
+		// 		<td>h.timestamp</td>
+		// 	</tr>
+		// );
+
 		return (
 			<div className="container-fluid admin-pane">
 				<div className="row">
 					<div className="col">
-						<h3>Log</h3>
-						<table class="table">
+						<Subtitle text="Log" showDate="false"/>
+						<table className="table">
 							<thead>
 								<tr>
 								<th scope="col">#</th>
@@ -17,24 +34,13 @@ class PageLog extends Component {
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-								</tr>
-								<tr>
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-								</tr>
-								<tr>
-								<th scope="row">3</th>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>@twitter</td>
-								</tr>
+							{/* {characters.map(c =>
+        <li
+          key={c.name}
+        >
+          {c.name}
+        </li>
+      )} */}
 							</tbody>
 						</table>
 					</div>
@@ -44,4 +50,8 @@ class PageLog extends Component {
 	}
 }
 
-export default PageLog;
+const mapStateToProps = ({ logs }) => ({
+	logs,
+});
+
+export default connect(mapStateToProps)(PageLog);

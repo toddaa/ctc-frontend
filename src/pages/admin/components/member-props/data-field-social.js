@@ -1,14 +1,19 @@
 import React from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+// import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-/*const iconFacebook = (
-	<FontAwesomeIcon icon={faFacebook} />
-);*/
+// const iconFacebook = (
+// 	<FontAwesomeIcon icon={faFacebook} />
+// );
+
+// const iconTwitter = (
+// 	<FontAwesomeIcon icon={faTwitter} />
+// );
 
 const DataFieldSocial = (props) => {
-	var facebook = props.value.facebook?"Facebook = " + props.value.facebook:"";
-	var twitter = props.value.twitter?"Twitter = " + props.value.twitter:"";
+	var facebook = props.value.facebook && 'Facebook = ' + props.value.facebook;
+	var twitter = props.value.twitter && "Twitter = " + props.value.twitter;
+	
 	if (props.value.facebook || props.value.twitter){
 		return(
 			<li className="list-group-item">

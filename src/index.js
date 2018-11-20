@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './reducer';
 import { getMembers } from './reducer/members/actions';
+import { getScanlog } from './reducer/scanlog/actions';
 
 const store = createStore(reducer, compose(
 	applyMiddleware(thunk),
@@ -19,6 +20,7 @@ const store = createStore(reducer, compose(
 ));
 
 store.dispatch(getMembers());
+store.dispatch(getScanlog());
 
 ReactDOM.render(
 	<Provider store={store}>
