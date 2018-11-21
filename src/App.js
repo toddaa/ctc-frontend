@@ -8,27 +8,8 @@ import EventsPage from './pages/events';
 import DonatePage from './pages/donate';
 import RootPage from './pages/root';
 import AdminPage from './pages/admin';
-import LoginPage from './pages/login';
-
-export const fakeAuth = {
-	isAuthenticated: false,
-	authenticate(cb) {
-		this.isAuthenticated = true
-		setTimeout(cb, 100)
-	},
-	signout(cb) {
-		this.isAuthenticated = false
-		setTimeout(cb, 100)
-	}
-}
-
-/*const PrivateRoute = ({ component: Component, ...rest }) => (
-	<Route {...rest} render={(props) => (
-		fakeAuth.isAuthenticated === true
-			? <Component {...props} />
-			: <Redirect to='/login' />
-	)} />
-)*/
+// import LoginPage from './pages/login';
+import Callback from './callback';
 
 class App extends Component {
 	render() {
@@ -41,8 +22,9 @@ class App extends Component {
 						<Route path='/programs' component={ProgramsPage} />
 						<Route path='/events' component={EventsPage} />
 						<Route path='/donate' component={DonatePage} />
-						<Route path='/login' component={LoginPage} />
+						{/* <Route path='/login' component={LoginPage} /> */}
 						<Route path='/admin' component={AdminPage} />
+						<Route exact path='/callback' component={Callback}/>
 					</Switch>
 				</div>
 			</Router>

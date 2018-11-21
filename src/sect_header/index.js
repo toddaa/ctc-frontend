@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faKey } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import auth0Client from '../auth';
 import './header.css';
 
 import CTC_logo from './Crosswalk-BlackwithDrop.png';
@@ -9,9 +10,16 @@ import CTC_logo from './Crosswalk-BlackwithDrop.png';
 const iconKey = (
 	<FontAwesomeIcon icon={faKey} />
 );
+const iconLogOut = (
+	<FontAwesomeIcon icon={faSignOutAlt} />
+);
 
 class Header extends Component {
 	render() {
+		const signOut = () => {
+			auth0Client.signOut();
+			this.props.history.replace('/');
+		};
 		return (
 			<header>
 				<nav className="navbar navbar-expand-md navbar-dark fixed-top navbar-ctc">
@@ -39,10 +47,21 @@ class Header extends Component {
 						</ul>
 						<ul className="navbar-nav">
 							<li className="nav-item">
-								<NavLink className="nav-link" to='/admin' exact aria-label="Admin">
-									<span className="d-none d-md-block">{iconKey}</span>
-									<span className="d-block d-md-none">Admin</span>
-								</NavLink >
+								{
+									!auth0Client.isAuthenticated() &&
+									<NavLink className="nav-link" to='/' exact aria-label="Admin" onClick={auth0Client.signIn}>
+										<span className="d-none d-md-block">{iconKey}</span>
+										<span className="d-block d-md-none">Admin</span>
+									</NavLink >
+								}
+								{
+									auth0Client.isAuthenticated() &&
+									<NavLink className="nav-link" to='/' exact aria-label="Logout" onClick={() => {signOut()}}>
+										<label className="mr-2 text-white">{auth0Client.getProfile().name}</label>
+										<span className="d-none d-md-block">{iconLogOut}</span>
+										<span className="d-block d-md-none">Logout</span>
+									</NavLink >
+								}
 							</li>
 						</ul>
 					</div>
@@ -52,4 +71,4 @@ class Header extends Component {
 	}
 }
 
-export default Header;
+export default withRouter(Header);

@@ -6,6 +6,7 @@ import PageLog from './components/sub-page/log';
 import PageMembers from './components/sub-page/members';
 import PageReports from './components/sub-page/reports';
 import PageDashboard from './components/sub-page/dashboard';
+import auth0Client from '../../auth';
 import './admin.css';
 
 const ContentAdmin = () => (
@@ -21,6 +22,12 @@ const ContentAdmin = () => (
 
 class AdminPage extends Component {
 	render() {
+
+		// const signOut = () => {
+		// 	auth0Client.signOut();
+		// 	this.props.history.replace('/');
+		// };
+
 		window.scrollTo(0, 0);
 		return (
 			<Router>
