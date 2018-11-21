@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Nav, NavItem, NavLink,
-		Card, CardBody, CardFooter, CardHeader,
-		CardTitle, TabContent, TabPane } from 'reactstrap';
+import { Nav, NavItem, NavLink, Card, CardBody, CardFooter, CardHeader, CardTitle, TabContent, TabPane } from 'reactstrap';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut, faUserTie, faUserNinja } from '@fortawesome/free-solid-svg-icons';
@@ -12,6 +10,7 @@ import DataFieldAddr from './data-field-addr';
 import DataFieldSubs from './data-field-subs';
 import DataFieldAttrs from './data-field-attr';
 import Moment from 'moment';
+import ScanLog from './scan_log';
 import './detail.css';
 
 const iconMember = (
@@ -100,9 +99,11 @@ class MemberProps extends Component {
 
 	toggle(tab) {
 		if (this.state.activeTab !== tab) {
+			//console.log(tab);
 			this.setState({
 				activeTab: tab
 			});
+			//console.log(this.state.activeTab);
 		}
 	}
 	render(){
@@ -121,10 +122,20 @@ class MemberProps extends Component {
 			case "V":
 				memberIcon = iconVolunteer;
 				activeMemberDets = <DetVolunteer data={member} />;
+				if (this.state.activeTab === '2'){
+					this.setState({
+						activeTab: '1'
+					})
+				}
 				break;
 			case "P":
 				memberIcon = iconParent;
 				activeMemberDets = <DetParent data={member} />;
+				if (this.state.activeTab === '2'){
+					this.setState({
+						activeTab: '1'
+					})
+				}
 				break;
 		}
 
@@ -155,10 +166,14 @@ class MemberProps extends Component {
 				<CardBody>
 					<TabContent activeTab={this.state.activeTab}>
 						<TabPane tabId="1">
-						<CardTitle>{memberIcon} {member.first_name} {member.last_name}</CardTitle>
+							<CardTitle>{memberIcon} {member.first_name} {member.last_name}</CardTitle>
 							{activeMemberDets}
 						</TabPane>
-						{/* {member.parents && <DetParent member={member} data={member.parents} />} */}
+                        <TabPane tabId="2">
+							<CardTitle>PARENT PAGE</CardTitle>
+							PARENT DETAILS
+						</TabPane>
+                        <ScanLog />
 					</TabContent>
 				</CardBody>
 				<CardFooter className="text-muted">

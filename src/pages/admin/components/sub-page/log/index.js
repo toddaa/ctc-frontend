@@ -10,14 +10,15 @@ class PageLog extends Component {
 
 	render() {
 
-		// const logRows = this.props.logs
-		// .map(h =>
-		
-		// 	<tr>
-		// 		<th scope="row">h.id</th>
-		// 		<td>h.timestamp</td>
-		// 	</tr>
-		// );
+		const logRows = this.props.scanlog
+		.map(h =>
+			<tr key={h.id.toString()}>
+				<th scope="row">{h.id}</th>
+				<td>{h.timestamp}</td>
+				<td>{h.mid}</td>
+				<td>{h.entry}</td>
+			</tr>
+		);
 
 		return (
 			<div className="container-fluid admin-pane">
@@ -27,20 +28,14 @@ class PageLog extends Component {
 						<table className="table">
 							<thead>
 								<tr>
-								<th scope="col">#</th>
-								<th scope="col">First</th>
-								<th scope="col">Last</th>
-								<th scope="col">Handle</th>
+								<th scope="col">ID</th>
+								<th scope="col">Timestamp</th>
+								<th scope="col">Member ID</th>
+								<th scope="col">Location/Activity</th>
 								</tr>
 							</thead>
 							<tbody>
-							{/* {characters.map(c =>
-        <li
-          key={c.name}
-        >
-          {c.name}
-        </li>
-      )} */}
+							{logRows}
 							</tbody>
 						</table>
 					</div>
@@ -50,8 +45,8 @@ class PageLog extends Component {
 	}
 }
 
-const mapStateToProps = ({ logs }) => ({
-	logs,
+const mapStateToProps = ({ scanlog }) => ({
+	scanlog,
 });
 
 export default connect(mapStateToProps)(PageLog);

@@ -19,8 +19,8 @@ const store = createStore(reducer, compose(
 	window.devToolsExtension ? window.devToolsExtension() : f => f
 ));
 
-store.dispatch(getMembers());
 store.dispatch(getScanlog());
+store.dispatch(getMembers());
 
 ReactDOM.render(
 	<Provider store={store}>
