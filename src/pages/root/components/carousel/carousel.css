@@ -3,7 +3,7 @@
 }
 
 .carousel-item{
-	padding:200px;
+	/* padding:200px; */
 }
 
 .carousel-caption {
@@ -12,4 +12,7 @@
 
 .carousel-caption p{
 	font-size:.8em;
+}
+.jumbotron{
+	background-color: transparent !important;
 }
