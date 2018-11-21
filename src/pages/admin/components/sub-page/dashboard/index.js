@@ -50,8 +50,8 @@ class PageDashboard extends Component {
 					</div>
 					<div className="col"> 
 						<div className="card-deck">
-							<DashCard icon={iconMember} value='45' name='Active Members' colorclass='bg-info' />
-							<DashCard icon={iconVolunteer} value='6' name='Active Volunteers' colorclass='bg-success' />
+							<DashCard icon={iconMember} value='45' name='Active Members' type='info' />
+							<DashCard icon={iconVolunteer} value='6' name='Active Volunteers' type='success' />
 						</div>
 					</div>
 				</div>
